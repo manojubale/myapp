@@ -5,6 +5,7 @@ pipeline {
 
         stage('Clone Code') {
             steps {
+                git credentialsId: 'github-token',
                 git 'https://github.com/yourusername/myapp.git'
             }
         }
